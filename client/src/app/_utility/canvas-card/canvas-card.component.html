@@ -1,0 +1,40 @@
+<div *ngIf="canvas" class="border-2 border-gray-700 shadow-md rounded-md w-72 h-96 flex flex-col">
+    <div class="flex flex-col gap-2 items-center">
+        <h1 class="font-bold text-2xl">{{canvas.title}}</h1>
+        <div class="border border-black w-full"></div>
+    </div>
+
+    <div class="flex-grow">
+        <div class="button_grid">
+            <div class="flex justify-center pt-3">
+                <img [src]="canvas.imageUrl" alt="/assets/Images/emptyImageIcon.jpg" class="w-36 h-32 rounded-md">
+            </div>
+
+            <div class="pl-2 pt-3 flex flex-col gap-1">
+                <h1 class="font-semibold text-lg">Author: {{canvas.authorUsername}}</h1>
+                <h1 class="font-semibold text-lg">Date Modified: {{canvas.dateModified | date}}</h1>
+            </div>
+
+            <div *ngIf="canvasCardProperties.isOpenButtonOn" class="pl-2 pb-2 flex gap-2">
+                <button (click)="openCanvas()" class="bg-white hover:bg-gray-100 text-gray-700 font-semibold py-2 px-3 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-gray-300">
+                    <img src="/assets/Images/folder_open_FILL0_wght400_GRAD0_opsz24.svg" alt="Open Folder" class="w-5 h-5">
+                </button>
+
+                <button *ngIf="canvasCardProperties.isEditButtonOn" (click)="editACanvas()" class="bg-white hover:bg-gray-100 text-gray-700 font-semibold py-2 px-3 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-gray-300">
+                    <img src="/assets/Images/edit-icon.svg" alt="Open Folder" class="w-5 h-5">
+                </button>
+
+                <button *ngIf="canvasCardProperties.isDescriptionButtonOn" (click)="openDescription()" class="bg-white hover:bg-gray-100 text-gray-700 font-semibold py-2 px-3 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-gray-300">
+                    <img src="/assets/Images/description.svg" alt="Open Folder" class="w-5 h-5">
+                </button>
+
+                
+                <button *ngIf="canvasCardProperties.isPublishButtonOn" (click)="setPublishCanvasStatus()" class="bg-white hover:bg-gray-100 text-gray-700 font-semibold py-2 px-3 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-gray-300">
+                    <img *ngIf="canvas.isPublished" src="/assets/Images/downArrow.svg" alt="Open Folder" class="w-5 h-5">
+                    <img *ngIf="!canvas.isPublished" src="/assets/Images/upArrow.svg" alt="Open Folder" class="w-5 h-5">
+
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div [class]="['bg-white','rounded-xl','shadow-md','flex','flex-col','gap-12','whiteTitledBox']"
+  [style]="this.whiteBoxCss">
+
+  
+  <div *ngIf="title" class="flex justify-center  align-top pt-3">
+    <h1 class="text-4xl font-extrabold  text-gray-800">{{title}}</h1>
+
+  </div>
+
+  <div class="flex-grow h-full flex flex-col">
+    <ng-content></ng-content>
+
+  </div>
+
+
+</div>

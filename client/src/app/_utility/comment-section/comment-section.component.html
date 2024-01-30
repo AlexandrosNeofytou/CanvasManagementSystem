@@ -1,0 +1,32 @@
+<div>
+    <div class="flex flex-col gap-3">
+
+        <div>
+            <input type="text" name="commentText" [(ngModel)]="commentText" placeholder="comment" 
+                class="text-2xl bg-transparent border-none 
+                border-0 outline-none w-full">
+           <div class="border-b border-black"></div>
+        </div>
+
+        <div class="flex items-center justify-center w-full pb-8">
+            <button (click)="submitComment()" class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-5 border border-blue-500 rounded-md shadow-md">
+                Post
+            </button>
+        </div>
+
+        <div class="flex flex-col gap-4">
+            <div *ngFor="let comment of comments">
+                <app-comment-card [comment]="comment"></app-comment-card>
+
+            </div>
+        </div>
+
+        <ng-container *ngIf="comments">
+            <div *ngIf="comments.length<totalNumberOfComments" class="flex justify-center">
+                <p (click)="loadComments()" class="text-blue-500 hover:underline cursor-pointer">show more</p>
+            </div>
+        </ng-container>
+       
+      
+    </div>
+</div>

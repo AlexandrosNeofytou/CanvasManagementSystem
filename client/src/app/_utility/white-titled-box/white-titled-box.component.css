@@ -1,0 +1,9 @@
+:root {
+    --lgBox-width: 600px;
+    --lgBox-height: 600px;
+}
+
+.whiteTitledBox {
+    width: var(--lgBox-width);
+    height: var(--lgBox-height);
+}

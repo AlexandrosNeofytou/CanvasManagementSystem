@@ -1,0 +1,34 @@
+<div class="flex justify-center items-center flex-col">
+    <div class="flex justify-center items-center flex-col w-full  mt-24 gap-20">
+        
+        <div>
+            <app-search-bar 
+            [searchFilters]="canvasSearchFilterNames" 
+            [defualtFilterIndex]="0"
+            (onSearchPressed)="searchCanvases($event)"></app-search-bar>
+
+        </div>
+
+        <div class="flex flex-row gap-2 justify-center flex-wrap w-full ">
+            <div *ngFor="let canvas of  canvasesDto">
+                <app-canvas-card [canvas]="canvas" [canvasCardProperties]="canvasCardProperties"></app-canvas-card>
+            </div>
+        </div>
+      
+    </div>
+
+    <div class="absolute bottom-0" *ngIf="paginationHeader">
+        <app-pagination 
+            [totalItems]="paginationHeader.itemsCount"
+            [currentPage]="pageNumber"
+            [hasSubmitButton]="false"
+            [itemsPerPage]="pageSize"
+            [numberOfPages]="paginationHeader.numberOfPages"
+            (onPageChanged)="onPaginationPageChanged($event)"
+            
+            ></app-pagination>
+    </div>
+
+</div>
+
+

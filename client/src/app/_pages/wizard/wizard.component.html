@@ -1,0 +1,31 @@
+<div *ngIf="currentQuestion" class="flex  flex-col items-center gap-5 pt-5">
+    <h1 class="text-4xl">{{currentQuestion.section.name}}</h1>
+    <h1 class="text-2xl">{{currentQuestion.questionName}}</h1>
+</div>
+
+<div *ngIf="currentQuestion" class="flex justify-center pt-14">
+
+    <app-answer-section 
+        [questionId]="currentQuestion.id"
+        [answers]="questionAnswers"
+        (onCreateAnswer)="createAnswer()"
+        (onRemoveAnswer)="removeAnswer($event)">
+
+    </app-answer-section>
+</div>
+
+<div *ngIf="questions.length>0" class="fixed bottom-0  pb-5 w-full">
+    <div class="flex justify-center">
+        <app-pagination 
+        (onPageChanged)="onPageChanged($event)"
+        [currentPage]="currentQuestionIndex"
+        [itemsPerPage]="1"
+        [numberOfPages]="questions.length"
+        [maxNumberOfPagesToDisplay]="6"
+        [hasSubmitButton]="true"
+        (onSumbit)="submitAnswers()">
+
+    </app-pagination>
+
+    </div>
+</div>

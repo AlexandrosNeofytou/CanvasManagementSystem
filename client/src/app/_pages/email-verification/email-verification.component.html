@@ -1,0 +1,64 @@
+<div class="w-full h-screen">
+
+
+    <div class="w-full h-full  flex justify-center items-center">
+        <div class="w-[500px] h-[350px] rounded-md shadow-md relative">
+
+            <div class="flex items-center p-7 flex-col gap-10">
+                <p class="font-bold text-[35px]">Enter you verification code</p>
+
+                <div class="flex flex-row gap-5">
+                    <div>
+                        <input [maxlength]="1" type="text" [(ngModel)]="codeDigits[0]"
+                            class="w-[50px] h-[50px] rounded-md border-2 border-gray-300 outline-none text-center">
+                    </div>
+
+                    <div>
+                        <input [maxlength]="1" type="text" [(ngModel)]="codeDigits[1]"
+                            class="w-[50px] h-[50px] rounded-md border-2 border-gray-300 outline-none text-center">
+                    </div>
+
+                    <div>
+                        <input [maxlength]="1" type="text" [(ngModel)]="codeDigits[2]"
+                            class="w-[50px] h-[50px] rounded-md border-2 border-gray-300 outline-none text-center">
+                    </div>
+
+                    <div>
+                        <input [maxlength]="1" type="text" [(ngModel)]="codeDigits[3]"
+                            class="w-[50px] h-[50px] rounded-md border-2 border-gray-300 outline-none text-center">
+                    </div>
+
+                    <div>
+                        <input [maxlength]="1" type="text" [(ngModel)]="codeDigits[4]"
+                            class="w-[50px] h-[50px] rounded-md border-2 border-gray-300 outline-none text-center">
+                    </div>
+                </div>
+
+
+                <div class="flex items-center flex-col gap-2">
+                    <button (click)="verifyAccount()"
+                        class="w-full h-[50px] px-4 rounded-md bg-blue-500 text-white font-bold">Verify Account</button>
+
+                    <p *ngIf="isCodeWrong" class="text-red-700 text-[15px]">*Incorrect code</p>
+
+                </div>
+            </div>
+
+
+            <div class="absolute bottom-0 left-0 right-0">
+                <div class="">
+                    <button (click)="sendVerificationCode()" class="w-full h-[50px] 
+                    px-4 rounded-md bg-transparent
+                     text-blue-600
+                     font-bold underline ">
+
+                        Resend code
+
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>

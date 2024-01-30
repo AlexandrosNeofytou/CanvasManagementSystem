@@ -1,0 +1,19 @@
+<nav *ngIf="isNavbarVisable==true" class="bg-blue-500 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+
+        <ul class="flex space-x-4"> 
+
+            <li>  <a routerLink="/view-own-canvases" routerLinkActive="active-link"sd 
+                class="text-white hover:underline font-normal">My Canvases</a></li>
+
+            <li><a routerLink="/broswe-canvases" routerLinkActive="active-link" 
+                class="text-white  hover:underline">Browse Canvases</a></li>
+
+            <li><a routerLink="/"  
+                class="text-white hover:underline" (click)="logout()">Logout</a></li>
+        </ul>
+
+        <a class="text-white text-2xl font-semibold" href="#">{{(user$ | async)?.username}} </a>
+
+    </div>
+</nav>

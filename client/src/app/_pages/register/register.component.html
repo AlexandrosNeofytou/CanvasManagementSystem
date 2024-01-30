@@ -1,0 +1,34 @@
+<div class="flex justify-center items-center h-screen">
+    <app-white-titled-box [title]="'Register'"
+     [heightLg]="550" 
+     [widthLg]="500"
+     [widthSm]="320"
+     [heightSm]="384"
+     >
+
+        <form  [formGroup]="registerModel" class="flex  flex-col gap-6 items-center" (submit)="register()" >
+            <app-input-field (onClickInput)="resetEmailExistsError()" [forcedErrorMessage]="emailExistsErrorMessage" [validationErrors]="emailValidationErrors" [placeHolder]="'Email...'" formControlName="email"></app-input-field>
+            <app-input-field (onClickInput)="resetUsenameExistsError()" [forcedErrorMessage]="usernameExistsErrorMessage" [validationErrors]="usernameValidationErrors" [placeHolder]="'Username...'" formControlName="username"></app-input-field>
+            <app-input-field [validationErrors]="passwordValidationErrors" [placeHolder]="'Password...'" formControlName="password" [type]="'password'"></app-input-field>
+            <app-input-field [validationErrors]="confirmPasswordValidationErrors" [placeHolder]="'Confirm Password...'" formControlName="confirmPassword" [type]="'password'"></app-input-field>
+
+
+            <input type="submit" value="Register" class="px-4 py-2 bg-blue-500 hover:bg-blue-600
+            text-white rounded-md transition 
+            duration-300 ease-in-out 
+            font-semibold
+            mt-2
+            cursor-pointer">
+
+        </form>
+
+      
+      
+        <div class="flex flex-grow items-end  justify-center">
+            <a href="#" (click)="navigateToLogin()" class="pb-2 text-blue-500 hover:text-blue-700 text-md max-sm:text-sm">Have an account ? </a>
+        </div>
+       
+       
+    </app-white-titled-box>
+</div>
+

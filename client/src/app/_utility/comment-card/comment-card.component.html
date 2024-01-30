@@ -1,0 +1,38 @@
+
+<div *ngIf="comment">
+    <div class="bg-white w-full h-full rounded-md flex flex-col p-4 shadow-md">
+        <div class="flex items-center justify-between">
+            <div class="flex gap-2">
+                <h1 class="text-lg font-bold">{{comment.authorName}}</h1>
+                <p class="text-sm">{{comment.timeCreated | date}}</p>
+            </div>
+        </div>
+    
+        <div #commentTextArea class="pt-2 break-words h-20" 
+            [ngClass]="{
+                'h-20 overflow-hidden': !isCommentSectionExtended,
+                'h-full overflow-visible':isCommentSectionExtended 
+                }">
+            <p class="text-sm">
+                {{comment.text}}
+            </p>
+    
+         
+         
+        </div>
+    
+        <div *ngIf="hasCommentOverFlow" class="flex justify-center ">
+            <div *ngIf="!isCommentSectionExtended">
+                <button  (click)="extendComment()" class="text-blue-500 hover:underline cursor-pointer">Show more</button>
+    
+            </div>
+    
+            <div *ngIf="isCommentSectionExtended">
+                <button  (click)="reduceComment()" class="text-blue-500 hover:underline cursor-pointer">Show less</button>
+    
+            </div>
+        </div>
+    </div>
+</div>
+
+

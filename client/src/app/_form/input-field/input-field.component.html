@@ -1,0 +1,25 @@
+
+<div class="flex flex-col gap-2 items-center">
+
+    <label *ngIf="label" class="text-lg font-medium">{{label}}</label>
+
+    <input [formControl]="control" (click)="onClick()"
+    
+    class="w-96  max-sm:w-60 max-sm:h-10 px-3 py-2 border rounded-md border-gray-300 placeholder-gray-400 focus:outline-none focus:ring focus:border-blue-500"
+    [type]="type" [placeholder]="placeHolder">
+
+        <div *ngIf="validationErrors" class="h-2" >
+            <ng-container *ngIf="forcedErrorMessage==''">
+                <p  *ngIf="getValidationError() as error" 
+                class="text-red-600">{{error.errorMessage}}</p>
+            </ng-container>
+
+            <p  *ngIf="forcedErrorMessage!=''"class="text-red-600">
+                {{forcedErrorMessage}}
+            </p>
+           
+        </div>
+
+   
+ 
+</div>

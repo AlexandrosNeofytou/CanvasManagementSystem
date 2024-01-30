@@ -1,0 +1,147 @@
+[
+    {
+        "QuestionName": "Who are our key customers?",
+        "SectionName": "Customer Segments",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What are their characteristics, needs, and preferences?",
+        "SectionName": "Customer Segments",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What problems do they want to solve?",
+        "SectionName": "Customer Segments",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "How can we categorize and prioritize different customer segments?",
+        "SectionName": "Customer Segments",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What value do we offer to our customers?",
+        "SectionName": "Value Propositions",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What problems are we solving for them?",
+        "SectionName": "Value Propositions",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What needs are we satisfying?",
+        "SectionName": "Value Propositions",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What makes our product or service unique and attractive?",
+        "SectionName": "Value Propositions",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "Through which channels do we reach our customers?",
+        "SectionName": "Channels",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "How do we deliver our value proposition to customers?",
+        "SectionName": "Channels",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "Which channels are most effective and efficient for our business?",
+        "SectionName": "Channels",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What kind of relationship do we establish with our customers?",
+        "SectionName": "Customer Relationships",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "How do we acquire, retain, and grow our customer base?",
+        "SectionName": "Customer Relationships",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What level of customer support or service do we provide?",
+        "SectionName": "Customer Relationships",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "How do we make money? What is our pricing strategy?",
+        "SectionName": "Revenue Streams",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What are the different revenue sources for our business?",
+        "SectionName": "Revenue Streams",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "Are there various pricing models or revenue streams to consider?",
+        "SectionName": "Revenue Streams",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What resources (assets, people, technology) are essential to our business model?",
+        "SectionName": "Key Resources",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What are the key factors that enable us to create and deliver value?",
+        "SectionName": "Key Resources",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What partnerships or supplier relationships do we rely on?",
+        "SectionName": "Key Resources",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What are the most critical activities in our business model?",
+        "SectionName": "Key Activities",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What do we need to excel at to deliver our value proposition?",
+        "SectionName": "Key Activities",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "Are there unique processes or activities that give us a competitive advantage?",
+        "SectionName": "Key Activities",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "Who are our key partners or collaborators?",
+        "SectionName": "Key Partnerships",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What are the reasons for forming these partnerships?",
+        "SectionName": "Key Partnerships",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "How do these partnerships strengthen our business model?",
+        "SectionName": "Key Partnerships",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What are the major costs and expenses associated with our business model?",
+        "SectionName": "Cost Structure",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "What are the fixed and variable costs?",
+        "SectionName": "Cost Structure",
+        "MaxNumberOfAnswers":5
+    },
+    {
+        "QuestionName": "How can we optimize our cost structure?",
+        "SectionName": "Cost Structure",
+        "MaxNumberOfAnswers":5
+    }
+]

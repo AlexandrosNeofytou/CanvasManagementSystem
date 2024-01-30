@@ -1,0 +1,6 @@
+<div class="bg-gray-100 h-screen w-screen">
+
+    <app-login (onRegisterPageChange)="changePageMode($event)" *ngIf="isLoginModeOn() "></app-login>
+
+    <app-register (onLoginPageChange)="changePageMode($event)"  *ngIf="isRegisterModeOn() "></app-register>    
+</div>

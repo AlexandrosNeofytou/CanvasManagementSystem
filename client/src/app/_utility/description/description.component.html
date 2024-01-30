@@ -1,0 +1,15 @@
+<div *ngIf="descriptionText!=''" class="absolute bg-white rounded-md shadow-md w-[500px] h-[300px] top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]">
+    <div class="flex justify-end absolute top-0 right-0 p-2">
+        <button (click)="closeDescription()" class="p-1 focus:outline-none">
+            <img src="assets/Images/close_FILL0_wght400_GRAD0_opsz24.svg" alt="Close" class="text-red-500" />
+        </button>
+    </div>
+
+    <div class="text-center mt-4">
+        <h1 class="text-3xl font-semibold">Description</h1>
+    </div>
+
+    <div class=" w-full px-2 text-lg mt-4  break-all">
+        <p>{{descriptionText}}</p>
+    </div>
+</div>

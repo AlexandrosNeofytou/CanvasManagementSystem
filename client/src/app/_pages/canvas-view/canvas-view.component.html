@@ -1,0 +1,101 @@
+<div class="flex items-center  flex-col justify-center pt-4 pb-2 w-full">
+
+    {{selectedCanvasViewMode}}
+    <h1 class="text-4xl font-bold text-center">{{ canvasName }}</h1>
+
+    <div class="flex justify-start w-[94%] flex-row gap-2">
+      
+
+        <button (click)="onCommentsButtonClicked()"
+            class="bg-white border-2 shadow-md border-gray-300 hover:border-blue-600 w-12 h-12 rounded-full flex justify-center items-center">
+            <img src="assets/Images/commentsIcon.svg" alt="Copy Icon" class="w-6 h-6">
+        </button>
+
+    </div>
+
+    <div class="grid_system border border-black w-[95%] h-[800px] mt-4">
+
+
+
+        <div class="grid grid-cols-5 border-b border-black">
+            <div>
+                <div class="h-full">
+                    <app-canvas-grid-section [canvasId]="canvasId" [answers]="sectionAnswers[7].answers" [section]="sections[7]"></app-canvas-grid-section>
+                </div>
+            </div>
+
+            <div class="grid grid-rows-2  border-l border-r border-black">
+                <div class=" border-b border-black h-full">
+
+                    <div class="h-full">
+                        <app-canvas-grid-section (onAnswersChanged)="onSectionAnswersChanged($event)" [canvasId]="canvasId"  [answers]="sectionAnswers[6].answers" [section]="sections[6]" ></app-canvas-grid-section>
+                    </div>
+                </div>
+
+                <div>
+
+                    <div class="h-full">
+                        <app-canvas-grid-section (onAnswersChanged)="onSectionAnswersChanged($event)" [canvasId]="canvasId"  [answers]="sectionAnswers[5].answers" [section]="sections[5]"></app-canvas-grid-section>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+
+                <div class="h-full">
+                    <app-canvas-grid-section (onAnswersChanged)="onSectionAnswersChanged($event)" [canvasId]="canvasId"  [answers]="sectionAnswers[1].answers" [section]="sections[1]"></app-canvas-grid-section>
+                </div>
+            </div>
+
+            <div class="grid grid-rows-2  border-l border-r border-black">
+                <div class=" border-b border-black">
+
+
+                    <div class="h-full">
+                        <app-canvas-grid-section (onAnswersChanged)="onSectionAnswersChanged($event)" [canvasId]="canvasId"  [answers]="sectionAnswers[3].answers" [section]="sections[3]"></app-canvas-grid-section>
+                    </div>
+                </div>
+
+                <div>
+
+
+                    <div class="h-full">
+                        <app-canvas-grid-section (onAnswersChanged)="onSectionAnswersChanged($event)" [canvasId]="canvasId"  [answers]="sectionAnswers[2].answers" [section]="sections[2]"></app-canvas-grid-section>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+
+
+                <div class="h-full">
+                    <app-canvas-grid-section (onAnswersChanged)="onSectionAnswersChanged($event)" [canvasId]="canvasId"  [answers]="sectionAnswers[0].answers" [section]="sections[0]"></app-canvas-grid-section>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2">
+            <div class=" border-r border-black">
+
+
+                <div class="h-full">
+                    <app-canvas-grid-section (onAnswersChanged)="onSectionAnswersChanged($event)" [canvasId]="canvasId"  [answers]="sectionAnswers[8].answers" [section]="sections[8]"></app-canvas-grid-section>
+                </div>
+            </div>
+
+            <div>
+
+
+                <div class="h-full">
+                    <app-canvas-grid-section (onAnswersChanged)="onSectionAnswersChanged($event)" [canvasId]="canvasId"  [answers]="sectionAnswers[4].answers" [section]="sections[4]"></app-canvas-grid-section>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="pt-10 w-[95%]">
+        <app-comment-section [canvasId]="canvasId"></app-comment-section>
+    </div>
+</div>

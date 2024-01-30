@@ -1,0 +1,32 @@
+<div
+    class="flex w-full h-full flex-col items-center text-center">
+
+    <div class="relative w-full">
+        <button (click)="toggleIsGridOptionsShown()" class="absolute border-2 right-0 m-1 p-1 rounded-full bg-white transition duration-300 shadow-md hover:shadow-lg hover:border-blue-600 focus:outline-none"
+            [ngClass]="{'border-blue-600':isGridOptionsShown}">
+            <img src="assets/Images/settings.svg" alt="Settings" class="w-8 h-8">
+        </button>
+    </div>
+
+    <h1 class="text-2xl pt-2">{{section?.name}}</h1>
+
+
+    <div *ngIf="!isGridOptionsShown" class="overflow-auto flex flex-col pt-3 w-full items-start pl-3">
+
+        <ul class="list-disc pl-4 ">
+            <li *ngFor="let answer of answers" class="pb-2">
+                <ng-container>
+                    <p>{{answer.answerText}}</p>
+                </ng-container>
+               
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="isGridOptionsShown" class="flex items-center flex-col gap-4 pt-10">
+        <button (click)=" copySection()" class="bg-white border-2 shadow-md border-gray-300 hover:border-blue-600 w-12 h-12 rounded-full flex justify-center items-center"><img src="assets/Images/copyIcon.svg" alt=""></button>
+        <button (click)="pasteCopiedSection()" class="bg-white border-2 shadow-md border-gray-300 hover:border-blue-600 w-12 h-12 rounded-full flex justify-center items-center"><img src="assets/Images/pasteIcon.svg" alt=""></button>
+        <button (click)="editSection()" class="bg-white border-2 shadow-md border-gray-300 hover:border-blue-600 w-12 h-12 rounded-full flex justify-center items-center"><img src="assets/Images/editIcon.svg" alt=""></button>
+
+    </div>
+</div>

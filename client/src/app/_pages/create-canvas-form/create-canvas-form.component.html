@@ -1,0 +1,30 @@
+<div class="flex items-center justify-center pt-48">
+    <app-white-titled-box title="Canvas">
+        <form [formGroup]="canvasForm" class="flex flex-col gap-7 items-center justify-center">
+            <app-input-field [label]="'Title'" type="text" formControlName="title"
+                [placeHolder]="'Title...'"></app-input-field>
+            <app-input-field [label]="'Description'" type="text" formControlName="description"
+                [placeHolder]="'Description...'"></app-input-field>
+
+                <div>
+                    <label for="file" class="hover:cursor-pointer bg-white text-blue-500 border border-blue-500 py-2 px-4 rounded" title="">
+                        Choose an Image
+                    </label>
+                    <input  accept=".png, .jpeg, .jpg" (change)="onImageUploaded($event)" type="file" id="file" class="absolute top-0 left-0 opacity-0 cursor-pointer">
+                </div>
+
+            <button (click)="createCanvas()" type="submit"
+                class="flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 shadow-sm">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="24" viewBox="0 -960 960 960" width="24">
+                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                </svg>
+
+
+            </button>
+
+
+
+        </form>
+    </app-white-titled-box>
+</div>
